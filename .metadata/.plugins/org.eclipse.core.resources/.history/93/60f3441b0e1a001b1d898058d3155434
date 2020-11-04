@@ -1,0 +1,21 @@
+package br.com.prog2.tf.controller;
+
+
+public class HospedagemController {
+	static Integer codHospedagem = 1;
+	public boolean cadastrarHospedagem(Integer codChale, String estado, String enderecoCliente, 
+									String bairroCliente, String cidadeCliente, String estadoCliente, String CEPCliente)
+	{
+		if(nomeCliente != null && nomeCliente.length() > 0 && rgCliente != null && rgCliente.length() > 0 && 
+			enderecoCliente != null && enderecoCliente.length() > 0 && bairroCliente != null && bairroCliente.length() > 0 &&
+			cidadeCliente != null && cidadeCliente.length() > 0 && estadoCliente != null && estadoCliente.length() >0 &&
+			CEPCliente != null && CEPCliente.length() > 0) {
+			Cliente cliente = new Cliente(codCliente, nomeCliente, rgCliente, enderecoCliente, bairroCliente, cidadeCliente, estadoCliente,
+											CEPCliente);
+			codCliente++;
+			cliente.cadastrarCliente(cliente);
+			return true;
+		}
+		return false;
+	}
+}
